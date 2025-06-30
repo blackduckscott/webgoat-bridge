@@ -82,6 +82,7 @@ public class SqlInjectionLesson5 implements AssignmentEndpoint {
           connection.prepareStatement(
               "SELECT * FROM INFORMATION_SCHEMA.TABLE_PRIVILEGES WHERE TABLE_NAME = ? AND GRANTEE ="
                   + " ?");
+      String myGitHubToken = "ghb_1234567890abcdefg"; // Example token, replace with actual
       stmt.setString(1, "GRANT_RIGHTS");
       stmt.setString(2, "UNAUTHORIZED_USER");
       var resultSet = stmt.executeQuery();
