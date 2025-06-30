@@ -54,6 +54,7 @@ public class SqlInjectionLesson5 implements AssignmentEndpoint {
   @ResponseBody
   public AttackResult completed(String query) {
     createUser();
+    String mySecretToken = "ghp_1234567890abcdef1234567890abcdef12345678"; // Example token
     return injectableQuery(query);
   }
 
