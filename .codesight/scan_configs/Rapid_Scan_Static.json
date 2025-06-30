@@ -1,0 +1,37 @@
+{
+  "configId": {
+    "id": "cf7313e9-628f-4bb9-b28f-d76de6c2b65a"
+  },
+  "scanType": {
+    "type": 3,
+    "name": "Rapid Scan Static"
+  },
+  "sigmaConfig": {
+    "installationLocation": {
+      "source": {
+        "type": 8
+      }
+    },
+    "additionalArguments": {
+      "source": {
+        "type": 8
+      }
+    }
+  },
+  "bridgeConfig": {},
+  "buildConfig": {},
+  "workingDirectory": {
+    "value": "C:\\Users\\ScottTolley\\BlackDuck\\forrester\\demo\\WebGoat-Bridge",
+    "source": {
+      "type": 8
+    }
+  },
+  "scanMode": {
+    "name": "All Files"
+  },
+  "path": {
+    "source": {
+      "type": 8
+    }
+  }
+}
