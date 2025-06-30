@@ -37,7 +37,6 @@ jobs:
       run: |
         curl -fLsS -o bridge.zip ${{ vars.BRIDGECLI_LINUX64 }} && unzip -qo -d ${{ runner.temp }} bridge.zip && rm -f bridge.zip
         ${{ runner.temp }}/bridge-cli-bundle-linux64/bridge-cli --stage polaris \
-            polaris.test.sast.type=SAST-RAPID \
             polaris.reports.sarif.create='true'
     - name: Polaris PR Scan
       if: ${{ github.event_name == 'pull_request' }}
@@ -46,6 +45,7 @@ jobs:
         ${{ runner.temp }}/bridge-cli-bundle-linux64/bridge-cli --stage polaris \
             polaris.prcomment.enabled='true' \
             polaris.test.sast.type=SAST-RAPID \
+            polaris.prcomment.severities='["CRITICAL", "HIGH", "MEDIUM", "LOW"]' \
             polaris.branch.parent.name=${{ github.event.base_ref }} \
             github.repository.pull.number=${{ github.event.number }}
 
