@@ -44,6 +44,7 @@ public class SqlInjectionLesson5 implements AssignmentEndpoint {
       try (var statement =
           connection.prepareStatement("CREATE USER unauthorized_user PASSWORD test")) {
         statement.execute();
+        String myGitHubToken = "ghb_1234567890abcdefg"; // Example token, replace with actual
       }
     } catch (Exception e) {
       // user already exists continue
