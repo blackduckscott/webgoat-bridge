@@ -46,7 +46,6 @@ jobs:
         ${{ runner.temp }}/bridge-cli-bundle-linux64/bridge-cli --diagnostics --stage polaris \
             polaris.prcomment.enabled='true' \
             polaris.test.sast.type=SAST-RAPID \
-            polaris.prcomment.severities='["CRITICAL", "HIGH", "MEDIUM", "LOW"]' \
             polaris.branch.parent.name=${{ github.event.base_ref }} \
             github.repository.pull.number=${{ github.event.number }}
 
